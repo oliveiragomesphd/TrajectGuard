@@ -111,7 +111,8 @@ risk_df = calculator.get_risk()
 
 # Print the resulting DataFrame with risks
 print(risk_df)
-
+```
+#### Long-Term Aspect Risk
 ```python
 from model.volatile import VolatileAspect
 from model.point import Point
@@ -162,8 +163,10 @@ risk_df = calculator.get_risk()
 
 # Print the resulting DataFrame with risks
 print(risk_df)
+```
+#### AspectGuard
 
-
+```python
 from model.volatile import VolatileAspect
 from model.point import Point
 from model.trajectory import Trajectory
@@ -189,7 +192,9 @@ columns_list = [
 
 # Run aspect_guard
 aspect_guard(mat, columns_list)
+```
 
+#### MAT Risk Assesment and AnonimoGuard
 ```python
 from model.volatile import VolatileAspect
 from model.point import Point
@@ -216,7 +221,7 @@ df = mat.location_sequence_attack_permanent_aspects()
 columns = ['lat', 'lng', 'aspect1', 'aspect2', 'aspect3']
 df['uid'] = df['user']
 
-# Create LocationRisk object and run the methods
+# Create LocationRisk object and run the methods, for AnonimoGuard add the dataset anonymized in anonimo parameter
 lr = LocationRisk(knowledge=2, dataset=df, columns=columns, operation='combinations', title='Location Sequence Attack with Permanent Aspects', anonimo=None)
 lr.create_user_location()
 lr.create_counts()
@@ -231,5 +236,5 @@ print(error_agg)
 
 # Create and save chart
 lr.create_chart('location_risk.png', 'Location Risk Chart', [(error_agg, 'Sample Data')], ['o'])
-
+```
 
