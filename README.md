@@ -1,6 +1,6 @@
 # TrajectGuard: Location Risk Analysis with Multiple Aspect Trajectories (MAT)
 
-This repository provides an implementation for analyzing the risk of location-based attacks using the **TrajectGuard** framework. The project includes methods to generate combinations of location data aspects and calculate the risk of unique identification.
+This repository provides an implementation for analyzing the risk of location-based attacks using the **TrajectGuard** framework. The project includes methods to generate combinations of multiple aspects trajecoty data and calculate the re-identification risk and aspect risk.
 
 ## Table of Contents
 
